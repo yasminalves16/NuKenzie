@@ -21,7 +21,7 @@ function App() {
     <div className="App">
       <header>
         <span>
-          {/* logo */}
+         <p>Logo</p>
         </span>
         <button onClick={() => setHomePage(true)}>Inicio</button>
       </header>
@@ -42,7 +42,7 @@ function App() {
             listTransactions={listTransactions}
             setFilteredList={setFilteredList}
           />
-          {/* {listTransactions.length < 1 && <ClearList />} */}
+          {listTransactions.length < 1 && <p>foto aqui</p>}
           {filteredList.length > 0 ? (
             <List
               setListTransactions={setListTransactions}
