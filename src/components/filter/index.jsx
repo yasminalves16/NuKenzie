@@ -16,9 +16,7 @@ const Filter = ({ listTransactions, setFilteredList }) => {
         <h3>Resumo financeiro</h3>
         <ul className="filter-list">
           <li>
-            <button onClick={filterAll} className="pink-button">
-              Todos
-            </button>
+            <button onClick={filterAll}>Todos</button>
           </li>
           <li>
             <button onClick={filterEntry}>Entradas</button>

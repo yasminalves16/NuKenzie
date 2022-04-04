@@ -5,6 +5,8 @@ import List from "./components/list";
 import TotalMoney from "./components/totalMoney";
 import HomePage from "./page/homePage";
 import Filter from "./components/filter";
+import Logo from "./components/img/logoKenzie.svg";
+import CardPage from "./components/img/NoCard.png";
 
 function App() {
   const [listTransactions, setListTransactions] = useState([
@@ -21,28 +23,36 @@ function App() {
     <div className="App">
       <header>
         <span>
-         <p>Logo</p>
+          <img src={Logo} alt="Logo nuKenzie"></img>
         </span>
         <button onClick={() => setHomePage(true)}>Inicio</button>
       </header>
       <main>
-        <div className="left-side">
-          <Form
-            list={listTransactions}
-            listTransactions
-            setListTransactions={setListTransactions}
-          />
-          {listTransactions.length > 0 && (
-            <TotalMoney list={listTransactions} />
-          )}
+        <div>
+          <section className="left-side">
+            <Form
+              list={listTransactions}
+              listTransactions
+              setListTransactions={setListTransactions}
+            />
+          </section>
+          <section className="left">
+            {listTransactions.length > 0 && (
+              <TotalMoney list={listTransactions} />
+            )}
+          </section>
         </div>
         <div className="right-side">
-
           <Filter
             listTransactions={listTransactions}
             setFilteredList={setFilteredList}
           />
-          {listTransactions.length < 1 && <p>foto aqui</p>}
+          {listTransactions.length < 1 && (
+            <div>
+              <p>Você ainda não possui nenhum lançamento</p>
+              <img src={CardPage} alt=""></img>
+            </div>
+          )}
           {filteredList.length > 0 ? (
             <List
               setListTransactions={setListTransactions}

@@ -2,12 +2,12 @@ import Button from "../button";
 
 const Card = ({ transaction, setListTransactions, list }) => {
     return (
-        <li>
-          <div >
+        <li className={transaction.type === "saida" ? "saida" : "card"}>
+          <div className='cardDiv'>
             <h3>{transaction.description}</h3>
             <p>{transaction.type}</p>
           </div>
-          <span>R$ {transaction.value}</span>
+          <span>R$ {transaction.value},00</span>
           <Button
             transaction={transaction}
             list={list}
@@ -20,4 +20,3 @@ const Card = ({ transaction, setListTransactions, list }) => {
 
 export default Card;
 
-// li  className={transaction.type === "saida" ? "saida" : "card"}

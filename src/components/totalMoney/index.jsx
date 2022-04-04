@@ -12,7 +12,8 @@ const TotalMoney = ({ list }) => {
     return (
         <div>
             <p>Valor Total:</p>
-            <p>$ {ValorTotal().toFixed(2)}</p>
+            <p className='valorTotal'>$ {ValorTotal().toFixed(2)}</p>
+            <span>O valor se refere ao saldo</span>
         </div>
     )
 }
