@@ -205,6 +205,8 @@ select:hover {
 
 .cardDiv p {
   color: #868e96;
+  font-size: 14px;
+  margin-bottom: 0;
 }
 
 .left-side button {
