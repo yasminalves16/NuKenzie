@@ -1,28 +1,20 @@
-import { useState } from "react";
-
 const Button = ({ list, setListTransactions, transaction }) => {
-  const [counter, setCounter] = useState(0);
+  
 
-  const deleteThisProd = (trans) => {
+  const deleteThisProd = (transaction) => {
+
     if (list.length === 1) {
       setListTransactions([]);
     } else {
-      setListTransactions(
-        list.filter((elem) => {
-          if (elem === trans && counter === 0) {
-            setCounter(counter + 1);
-          } else if (elem === trans && counter === 1) {
-            return elem === trans;
-          }
-          return elem !== trans;
-        })
-      );
+      const filtrados = list.filter((elem) =>  elem !== transaction)
+      setListTransactions(filtrados);
     }
   };
+
   return (
     <button
       className="remove-button"
-      onClick={(e) => {
+      onClick={() => {
         deleteThisProd(transaction);
       }}
     >

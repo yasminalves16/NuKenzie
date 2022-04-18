@@ -1,4 +1,5 @@
 const Filter = ({ listTransactions, setFilteredList }) => {
+  
     const filterAll = () => {
       setFilteredList(listTransactions);
     }
