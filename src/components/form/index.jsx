@@ -63,7 +63,6 @@ const Form = ({ list, setListTransactions }) => {
         onClick={(e) => {
           e.preventDefault();
           e.target.value =''
-          // aqui
           newTransaction(novaEntrada);
         }}
       >

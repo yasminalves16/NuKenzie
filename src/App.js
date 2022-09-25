@@ -20,7 +20,7 @@ function App() {
     ) : (
         <div className="App">
 
-            <Header/>
+            <Header setHomePage={setHomePage}/>
             
             <main>
 
